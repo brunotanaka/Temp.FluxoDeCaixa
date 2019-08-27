@@ -7,6 +7,8 @@ Utilizando .NET Core, RabbitMQ e XUnity
 
 <b>Comando para subir os containers completos:</b> docker-compose up -d <br/>
 <b>Comando para subir somente rabbitmq e mongo para debug:</b> docker-compose -f rabbit-mongo.yml up -d <br/>
+<b>Necessário adicionar a linha abaixo no hosts da máquina<br/>
+<b>127.0.0.1	mongodb<br/>
 
 # Informações sobre os projetos
 A API possui documentação com o Swashbuckle, para acessar é necessário acessar a porta na qual a API está disponível, adicionando a rota /swagger.
