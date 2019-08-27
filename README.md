@@ -6,7 +6,7 @@ Utilizando .NET Core, RabbitMQ e XUnity
 <b>Via Containers:</b> é necessário subir os containers localizados na pasta docker no arquivo "docker-compose.yml", a API está disponível na porta 5101.
 
 <b>Comando para subir os containers completos:</b> docker-compose up -d <br/>
-<b>Comando para subir somente rabbitmq e mongo para debug:</b> docker-compose -f rabbit-mongo.yml up -d <br/>
+<b>Comando para subir somente rabbitmq e mongo para debug:</b> docker-compose -f rabbit-mongo.yml up -d <br/><br/>
 <b>Necessário adicionar a linha abaixo no hosts da máquina<br/>
 <b>127.0.0.1	mongodb<br/>
 
