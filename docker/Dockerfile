@@ -1,24 +1,27 @@
 # Build ###################################################################
-FROM microsoft/aspnetcore-build:2.0 AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:latest AS build-env
 
 ARG projeto
 ARG repositorio
 ARG pathProjeto
+ARG branch
 
 RUN apt-get update && apt-get install -y git
 
 RUN git clone $repositorio
 WORKDIR $pathProjeto
 
+RUN git checkout $branch
 WORKDIR $projeto
 
 RUN mv $projeto.csproj main.csproj
 
 RUN dotnet restore
+
 RUN dotnet publish -c Release -o out
 
 # # Aplicação ###################################################################
-FROM microsoft/aspnetcore:2.0
+FROM mcr.microsoft.com/dotnet/core/aspnet:latest
 
 ARG projeto
 ARG pathProjeto
